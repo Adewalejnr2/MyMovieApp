@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-  const customer = await Customers.find().sort('name');
+  const customer = await Customer.find().sort('name');
   res.send(customer);
 });
 
